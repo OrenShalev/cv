@@ -1,6 +1,6 @@
 # Oren Shalev's CV
 
-The updated CV is available [here](https://orenshalev.github.io/CV/) (https://orenshalev.github.io/CV/).
+The updated CV is available at [https://orenshalev.github.io/CV/](https://orenshalev.github.io/CV/).
 
 Objective/s
 
