@@ -2,6 +2,8 @@
 
 The updated CV is available at [https://orenshalev.github.io/CV/](https://orenshalev.github.io/CV/).
 
+Contact info
+
 Objective/s
 
 Personal details (?)
