@@ -1,0 +1,92 @@
+body {
+    /*font-family: 'Libre Franklin', serif;*/
+    font-family: "Helvetica Neue", sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    box-sizing: border-box;
+}
+.body-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 1.5em;
+    box-sizing: inherit;
+}
+
+@media (min-width: 40em) {
+    .body-wrapper {
+        width: calc(100% * 2 / 3);
+    }
+}
+
+h1, h3 {
+    /*font-family: 'Libre Baskerville', serif;*/
+}
+
+h1 {
+    border-bottom: 1px solid lightgrey;
+    /*
+    background-image: url(https://avatars1.githubusercontent.com/u/10510674?v=4&s=40);
+    background-position: right;
+    background-repeat: no-repeat;
+    */
+}
+
+#profile-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5em;
+    filter: saturate(0.3) brightness(4);
+    /*transform: scale(1);*/
+}
+
+#contact-methods {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#contact-methods > li {
+    display: inline;
+}
+#contact-methods > li:nth-last-child(n+2)::after { /* every child except the last */
+    content: " //";
+    color: red;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+a[href^="https://github.com"]::before {
+    /*content: url(https://assets-cdn.github.com/favicon.ico);*/
+    /* content: "M"; */
+    /* color: transparent; */
+    content: "\00a0\00a0\00a0\00a0"; /*meh*/
+    /* height: 1em; */
+    /* width: 1em; */
+    /* display: inline; */
+    background-size: 1em;
+    background-image: url(https://assets-cdn.github.com/favicon.ico); /*not visible in print by default...*/
+    /* font-size: 1em; */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: .25em;
+}
+
+a[href^="https://twitter.com"]::before {
+    content: url(//abs.twimg.com/favicons/favicon.ico);
+}
+
+@media print {
+    a[href^="http"]::after {
+        content: " (" attr(href) ") "
+    }
+}
+
+::selection {
+    background-color: yellow;
+}
