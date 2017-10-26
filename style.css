@@ -1,10 +1,12 @@
 body {
     /*font-family: 'Libre Franklin', serif;*/
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: "Georgia", serif;
+    /*font-family: "Helvetica Neue", sans-serif;*/
     display: flex;
     justify-content: center;
     text-align: justify;
     box-sizing: border-box;
+    line-height: 1.25;
 
     /*background-image: url(hex.svg);*/
 }
@@ -22,12 +24,15 @@ body {
 }
 
 h1, h4 {
+    font-family: "Helvetica Neue", sans-serif;
+    /*font-family: "Georgia", serif;*/
     /*font-family: 'Libre Baskerville', serif;*/
 }
 
 h1 {
     color: hsl(120, 80%, 40%);
     border-bottom: 1px solid lightgrey;
+    /*text-shadow: 1px 1px white, 2px 2px currentColor;*/
     /*
     background-image: url(https://avatars1.githubusercontent.com/u/10510674?v=4&s=40);
     background-position: right;
@@ -45,7 +50,7 @@ h4 {
     right: 0;
     padding: 1.5em;
     filter: saturate(0.3) brightness(4);
-    /*transform: scale(1);*/
+    filter: grayscale(1) brightness(4);
 }
 
 #contact-methods {
@@ -70,6 +75,12 @@ a {
 @media print {
     a[href^="http"]::after {
         content: " (" attr(href) ") "
+    }
+}
+
+@media screen {
+    #updated-cv-link {
+        display: none;
     }
 }
 
