@@ -1,0 +1,17 @@
+{
+  "name": "oren-shalev-cv",
+  "version": "1.0.0",
+  "description": "Oren Shalev's CV",
+  "scripts": {
+    "sass": "node-sass style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrenShalev/CV.git"
+  },
+  "author": "Oren Shalev",
+  "homepage": "https://orenshalev.github.io/cv",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  }
+}
