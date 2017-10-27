@@ -1,0 +1,14 @@
+{
+  "name": "Oren Shalev, CV",
+  "short_name": "Oren Shalev",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#12a112",
+  "icons": [
+    {
+      "src": "https://avatars1.githubusercontent.com/u/10510674?v=4&s=80",
+      "sizes": "80x80"
+    }
+  ]
+}
