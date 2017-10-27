@@ -2,13 +2,16 @@ body {
     /*font-family: 'Libre Franklin', serif;*/
     font-family: "Georgia", serif;
     /*font-family: "Helvetica Neue", sans-serif;*/
+    font-family: 'Roboto Slab', serif;
+
+
     display: flex;
     justify-content: center;
     text-align: justify;
     box-sizing: border-box;
     line-height: 1.25;
+    color: #222;
 
-    /*background-image: url(hex.svg);*/
 }
 .body-wrapper {
     width: 100%;
@@ -17,9 +20,9 @@ body {
     box-sizing: inherit;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
     .body-wrapper {
-        width: calc(100% * 2 / 3);
+        width: calc(100% * 3 / 4);
     }
 }
 
@@ -27,17 +30,13 @@ h1, h4 {
     font-family: "Helvetica Neue", sans-serif;
     /*font-family: "Georgia", serif;*/
     /*font-family: 'Libre Baskerville', serif;*/
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-    color: hsl(120, 80%, 40%);
+    color: hsl(120, 80%, 35%);
     border-bottom: 1px solid lightgrey;
     /*text-shadow: 1px 1px white, 2px 2px currentColor;*/
-    /*
-    background-image: url(https://avatars1.githubusercontent.com/u/10510674?v=4&s=40);
-    background-position: right;
-    background-repeat: no-repeat;
-    */
 }
 
 h4 {
@@ -64,12 +63,43 @@ h4 {
 }
 #contact-methods > li:nth-last-child(n+2)::after { /* every child except the last */
     content: " //";
-    color: red;
+    color: #ccc;
+}
+
+#experiment {
+    list-style: none;
+    padding: 0;
+}
+
+#experiment > li {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+}
+
+#experiment p {
+    /*outline: 1px solid lightgrey;*/
+    margin: 0 1em;
+}
+
+#experiment p:first-child {
+    min-width: 120px;
+    color: #484;
+}
+
+@media (min-width: 48em) {
+    #experiment > li {
+        flex-direction: row;
+    }
+
+    #experiment p:first-child {
+        text-align: right;
+    }
 }
 
 a {
     text-decoration: none;
-    color: blue;
+    color: hsla(150, 80%, 40%, 1);
 }
 
 @media print {
@@ -85,5 +115,5 @@ a {
 }
 
 ::selection {
-    background-color: hsl(60, 100%, 80%);
+    background-color: hsl(60, 100%, 70%);
 }
