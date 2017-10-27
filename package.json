@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Oren Shalev's CV",
   "scripts": {
-    "sass": "node-sass style.scss style.css"
+    "sass": "./node_modules/.bin/node-sass -w style.scss style.css"
   },
   "repository": {
     "type": "git",
