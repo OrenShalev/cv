@@ -47,31 +47,26 @@ h4 {
   margin: 0;
   padding: 0;
   text-align: center; }
-
-#contact-methods > li {
-  display: inline; }
-
-#contact-methods > li:nth-last-child(n+2)::after {
-  /* every child except the last */
-  content: " //";
-  color: #ccc; }
+  #contact-methods > li {
+    display: inline; }
+    #contact-methods > li:nth-last-child(n+2)::after {
+      /* every child except the last */
+      content: " //";
+      color: #ccc; }
 
 #experiment {
   list-style: none;
   padding: 0; }
-
-#experiment > li {
-  display: flex;
-  flex-direction: column;
-  margin: 1em 0; }
-
-#experiment p {
-  /*outline: 1px solid lightgrey;*/
-  margin: 0 1em; }
-
-#experiment p:first-child {
-  min-width: 120px;
-  color: #484; }
+  #experiment > li {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0; }
+  #experiment p {
+    /*outline: 1px solid lightgrey;*/
+    margin: 0 1em; }
+    #experiment p:first-child {
+      min-width: 120px;
+      color: #484; }
 
 @media print, (min-width: 48em) {
   #experiment > li {
