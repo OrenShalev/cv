@@ -73,7 +73,7 @@ h4 {
   min-width: 120px;
   color: #484; }
 
-@media (min-width: 48em) {
+@media print, (min-width: 48em) {
   #experiment > li {
     flex-direction: row; }
   #experiment p:first-child {

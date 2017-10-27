@@ -87,7 +87,7 @@ h4 {
     color: #484;
 }
 
-@media (min-width: 48em) {
+@media print, (min-width: 48em) {
     #experiment > li {
         flex-direction: row;
     }
