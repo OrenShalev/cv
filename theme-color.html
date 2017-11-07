@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Theme color picker</title>
-    <meta name="theme-color" content="black">
+    <meta name="theme-color"> <!-- will change the content attr of this el. -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        input[type=color] {
+            height: 50vw; /* nice square */
+            width:  50vw;
+        }
+    </style>
 </head>
 <body>
-    <input id="picker" type="color" />
+    <input id="picker" type="color" value="#ff8000"/>
     <script>
         const meta = document.querySelector('[name=theme-color');
         const picker = document.querySelector('#picker');
@@ -15,7 +27,9 @@
             meta.content = picker.value;
         };
 
+        picker.addEventListener(`input`, pickaboo);
         picker.addEventListener(`change`, pickaboo);
+        pickaboo();
 
     </script>
 </body>
