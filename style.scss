@@ -1,3 +1,6 @@
+$colorBase: hsl(120, 80%, 35%);
+$colorVariant1: desaturate($colorBase, 10%);
+
 body {
     font-family: 'Roboto Slab', serif;
     display: flex;
@@ -26,12 +29,12 @@ h1, h4 {
 }
 
 h1 {
-    color: hsl(120, 80%, 35%);
+    color: $colorBase;
     border-bottom: 1px solid lightgrey;
 }
 
 h4 {
-    color: hsl(150, 80%, 40%);
+    color: $colorVariant1;
 }
 
 #profile-photo {
@@ -74,7 +77,7 @@ h4 {
 
         &:first-child {
             min-width: 120px;
-            color: #484;
+            color: $colorVariant1;
         }
     }
 }
@@ -93,7 +96,7 @@ h4 {
 
 a {
     text-decoration: none;
-    color: hsla(150, 80%, 40%, 1);
+    color: $colorVariant1;
 }
 
 @media print {

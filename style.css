@@ -25,7 +25,7 @@ h1 {
   border-bottom: 1px solid lightgrey; }
 
 h4 {
-  color: #14b866; }
+  color: #1b981b; }
 
 #profile-photo {
   position: absolute;
@@ -58,7 +58,7 @@ h4 {
     margin: 0 1em; }
     .experience__list p:first-child {
       min-width: 120px;
-      color: #484; }
+      color: #1b981b; }
 
 @media print, (min-width: 48em) {
   .experience__list > li {
@@ -68,7 +68,7 @@ h4 {
 
 a {
   text-decoration: none;
-  color: #14b866; }
+  color: #1b981b; }
 
 @media print {
   a[href^="http"]::after {
