@@ -1,10 +1,5 @@
 body {
-    /*font-family: 'Libre Franklin', serif;*/
-    font-family: "Georgia", serif;
-    /*font-family: "Helvetica Neue", sans-serif;*/
     font-family: 'Roboto Slab', serif;
-
-
     display: flex;
     justify-content: center;
     text-align: justify;
@@ -27,16 +22,12 @@ body {
 }
 
 h1, h4 {
-    font-family: "Helvetica Neue", sans-serif;
-    /*font-family: "Georgia", serif;*/
-    /*font-family: 'Libre Baskerville', serif;*/
     font-family: 'Roboto', sans-serif;
 }
 
 h1 {
     color: hsl(120, 80%, 35%);
     border-bottom: 1px solid lightgrey;
-    /*text-shadow: 1px 1px white, 2px 2px currentColor;*/
 }
 
 h4 {
@@ -68,7 +59,7 @@ h4 {
     }
 }
 
-#experiment {
+.experience__list {
     list-style: none;
     padding: 0;
 
@@ -79,7 +70,6 @@ h4 {
     }
 
     p {
-        /*outline: 1px solid lightgrey;*/
         margin: 0 1em;
 
         &:first-child {
@@ -90,7 +80,7 @@ h4 {
 }
 
 @media print, (min-width: 48em) {
-    #experiment {
+    .experience__list {
         > li {
             flex-direction: row;
         }
