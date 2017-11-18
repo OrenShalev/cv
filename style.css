@@ -31,8 +31,9 @@ h4 {
   position: absolute;
   top: 0;
   right: 0;
+  width: 5em;
+  height: 5em;
   padding: 1.5em;
-  filter: saturate(0.3) brightness(4);
   filter: grayscale(1) brightness(4); }
 
 #contact-methods {
