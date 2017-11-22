@@ -68,30 +68,30 @@ h4 {
     list-style: none;
     padding: 0;
 
-    > li {
+    > .experience__list-item {
         display: flex;
         flex-direction: column;
         margin: 1em 0;
-    }
 
-    p {
-        margin: 0 1em;
+        & > * {
+            margin: 0 1em;
 
-        &:first-child {
-            min-width: 120px;
-            color: $colorVariant1;
+            &:first-child {
+                min-width: 120px;
+                color: $colorVariant1;
+            }
         }
     }
 }
 
 @media print, (min-width: 48em) {
     .experience__list {
-        > li {
+        > .experience__list-item {
             flex-direction: row;
-        }
 
-        p:first-child {
-            text-align: right;
+            & > :first-child {
+                text-align: right;
+            }
         }
     }
 }

@@ -51,21 +51,21 @@ h4 {
 .experience__list {
   list-style: none;
   padding: 0; }
-  .experience__list > li {
+  .experience__list > .experience__list-item {
     display: flex;
     flex-direction: column;
     margin: 1em 0; }
-  .experience__list p {
-    margin: 0 1em; }
-    .experience__list p:first-child {
-      min-width: 120px;
-      color: #1b981b; }
+    .experience__list > .experience__list-item > * {
+      margin: 0 1em; }
+      .experience__list > .experience__list-item > *:first-child {
+        min-width: 120px;
+        color: #1b981b; }
 
 @media print, (min-width: 48em) {
-  .experience__list > li {
+  .experience__list > .experience__list-item {
     flex-direction: row; }
-  .experience__list p:first-child {
-    text-align: right; } }
+    .experience__list > .experience__list-item > :first-child {
+      text-align: right; } }
 
 a {
   text-decoration: none;
