@@ -78,7 +78,15 @@ h4 {
 
             &:first-child {
                 min-width: 120px;
+                margin: 0 1em .5em;
                 color: $colorVariant1;
+            }
+
+            > p { // Echh... needs refactor
+                margin: 0 0 1em;
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -115,4 +123,8 @@ a {
 
 ::selection {
     background-color: hsl(60, 100%, 70%);
+}
+
+* {
+    //outline: 1px solid; // uncomment to debug...
 }
