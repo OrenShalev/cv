@@ -18,7 +18,7 @@ body {
     box-sizing: inherit;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 64em) {
     .body-wrapper {
         width: calc(100% * 3 / 4);
     }
