@@ -64,11 +64,11 @@ h4 {
     }
 }
 
-.experience__list {
+.chronologicalList {
     list-style: none;
     padding: 0;
 
-    > .experience__list-item {
+    > .chronologicalList__item {
         display: flex;
         flex-direction: column;
         margin: 1em 0;
@@ -93,8 +93,8 @@ h4 {
 }
 
 @media print, (min-width: 48em) {
-    .experience__list {
-        > .experience__list-item {
+    .chronologicalList {
+        > .chronologicalList__item {
             flex-direction: row;
 
             & > :first-child {
@@ -102,6 +102,11 @@ h4 {
             }
         }
     }
+}
+
+.interests {
+    list-style: none;
+    padding: 0;
 }
 
 a {
