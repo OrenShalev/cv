@@ -25,25 +25,26 @@ body {
 }
 
 h1, h4 {
-    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid lightgrey;
 }
 
 h1 {
     color: $colorBase;
-    border-bottom: 1px solid lightgrey;
 }
 
 h4 {
+    font-family: 'Roboto', sans-serif;
     color: $colorVariant1;
+    margin-bottom: .5em;
 }
 
 #profile-photo {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1.5em;
+    right: 1.5em;
     width: 5em;
     height: 5em;
-    padding: 1.5em;
+    border-radius: .5em;
     //filter: saturate(0.3) brightness(4); // color
     filter: grayscale(1) brightness(4); // b/w
 }

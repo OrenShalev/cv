@@ -18,22 +18,23 @@ body {
     width: calc(100% * 3 / 4); } }
 
 h1, h4 {
-  font-family: 'Roboto', sans-serif; }
-
-h1 {
-  color: #12a112;
   border-bottom: 1px solid lightgrey; }
 
+h1 {
+  color: #12a112; }
+
 h4 {
-  color: #1b981b; }
+  font-family: 'Roboto', sans-serif;
+  color: #1b981b;
+  margin-bottom: .5em; }
 
 #profile-photo {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 1.5em;
+  right: 1.5em;
   width: 5em;
   height: 5em;
-  padding: 1.5em;
+  border-radius: .5em;
   filter: grayscale(1) brightness(4); }
 
 #contact-methods {
