@@ -30,10 +30,10 @@ h4 {
 
 #profile-photo {
   position: absolute;
-  top: 1.5em;
+  top: 2em;
   right: 1.5em;
-  width: 5em;
-  height: 5em;
+  width: 4em;
+  height: 4em;
   border-radius: .5em;
   filter: grayscale(1) brightness(4); }
 
@@ -42,12 +42,19 @@ h4 {
   margin: 0;
   padding: 0;
   text-align: center; }
+
+@media (min-width: 30em) {
+  #profile-photo {
+    top: 1.5em;
+    right: 1.5em;
+    width: 5em;
+    height: 5em; }
   #contact-methods > li {
     display: inline; }
     #contact-methods > li:nth-last-child(n+2)::after {
       /* every child except the last */
       content: " //";
-      color: #ccc; }
+      color: #ccc; } }
 
 .chronologicalList {
   list-style: none;
