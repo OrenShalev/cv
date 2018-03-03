@@ -28,6 +28,9 @@ h4 {
   color: #1b981b;
   margin-bottom: .5em; }
 
+ul {
+  list-style-type: square; }
+
 #profile-photo {
   position: absolute;
   top: 2em;
@@ -56,13 +59,16 @@ h4 {
       content: " //";
       color: #ccc; } }
 
+#abstract-and-objective > li > p {
+  margin: 0 0 .5em; }
+
 .chronologicalList {
   list-style: none;
   padding: 0; }
   .chronologicalList > .chronologicalList__item {
     display: flex;
     flex-direction: column;
-    margin: 1em 0; }
+    margin: 1em 0 2em; }
     .chronologicalList > .chronologicalList__item > * {
       margin: 0 1em; }
       .chronologicalList > .chronologicalList__item > *:first-child {
@@ -70,7 +76,7 @@ h4 {
         margin: 0 1em .5em;
         color: #1b981b; }
       .chronologicalList > .chronologicalList__item > * > p {
-        margin: 0 0 1em; }
+        margin: 0 0 .5em; }
         .chronologicalList > .chronologicalList__item > * > p:last-child {
           margin-bottom: 0; }
 
@@ -97,4 +103,5 @@ a {
     display: none; } }
 
 ::selection {
-  background-color: #ffff66; }
+  background-color: #ffff66;
+  color: black; }
