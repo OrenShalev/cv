@@ -139,6 +139,13 @@ a {
     a[href^="http"]::after {
         content: " (" attr(href) ") "
     }
+
+    @page {
+        size: A4;
+        size: 210mm 297mm;
+        margin: 1.27cm 1.27cm;
+        overflow: visible;
+    }
 }
 
 @media screen {
