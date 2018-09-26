@@ -23,7 +23,7 @@ h1, h4 {
 h1 {
   color: #12a112; }
 
-h4 {
+h4, h5 {
   font-family: 'Roboto', sans-serif;
   color: #1b981b;
   margin-bottom: .5em; }
