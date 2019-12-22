@@ -1,3 +1,8 @@
+<!--
+If you're reading this, thanks for taking an interest in my source code. 😉 WDYT? Drop me me a line at my
+Twitter, it's somewhere around here...
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +11,13 @@
     <meta name="theme-color" content="#12a112">
 
     <title>Oren Shalev, CV</title>
-    <meta name="description" content="CV of Oren Shalev, front-end team leader." >
+    <meta name="description" content="CV of Oren Shalev, front-end developer." >
     <meta property="og:title" content="Oren Shalev, CV" >
     <meta property="og:url" content="https://orenshalev.github.io/cv/" >
-    <meta property="og:description" content="CV of Oren Shalev, front-end team leader." >
+    <meta property="og:description" content="CV of Oren Shalev, front-end developer." >
     <meta property="og:image" content="https://orenshalev.github.io/cv/OrenShalev.png" >
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <link rel="stylesheet" href="style.css"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,53 +26,55 @@
     <!--<meta name="description" content="">-->
     <!--<meta name="robots" content="all">-->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300|Roboto+Slab:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,500|Roboto:300&display=swap" rel="stylesheet">
+
 </head>
 
 <body id="oren-shalev-cv">
 <div class="body-wrapper">
     <header>
         <h1>Oren Shalev, CV</h1>
-        <img id="profile-photo" src="OrenShalev.png" alt="Oren Shalev's profile photo"/>
-        <h6>Last update: September 2018</h6>
+        <p id="last-update">Last update: Dcember 2019</p>
     </header>
 
     <section id="contact-info">
         <ul id="contact-methods">
             <li>Phone <a href="tel:+972545955295">054-5955295</a></li>
             <li>Email <a href="mailto:shalev.oren@gmail.com">shalev.oren@gmail.com</a></li>
-            <!--<li>Twitter <a href="https://twitter.com/orenshalev">@orenshalev</a></li>-->
-            <!--<li>GitHub <a href="https://github.com/orenshalev">orenshalev</a></li>-->
-            <!--<li>LinkedIn <a href="https://il.linkedin.com/in/orenshalev">Oren Shalev</a></li>-->
+<!--            <li>Twitter <a href="https://twitter.com/orenshalev">@orenshalev</a></li>-->
+<!--            <li>GitHub <a href="https://github.com/orenshalev">orenshalev</a></li>-->
+<!--            <li>LinkedIn <a href="https://il.linkedin.com/in/orenshalev">Oren Shalev</a></li>-->
         </ul>
     </section>
 
     <section id="abstract-and-objective">
-        <h4>Abstract</h4>
-        <p>N00b front-end engineer at Facebook. Before that, front-end team leader for 3.5 years, leading 6 developers.
-            Previously a front-end developer and a back-end developer.</p>
-
-        <p>During the past few years at my previous job I have developed a product’s web app from the ground up, first as an engineer and later as the team leader. Strengths and highlights:</p>
-        <ul>
-            <li><p>Learning new technologies and applying them in the team, for example:</p></li>
-            <ul>
-                <li><p>Converted from ES5 to ES2015+.</p></li>
-                <li><p>Introduced tests.</p></li>
-                <li><p>Introduced CSS grid.</p></li>
-            </ul>
-            <li><p>Excellent collaboration with direct manager and above, engineers of my team and others, non-dev managers and engineers.</p></li>
-            <li><p>Working with local and off-shore teams; leading local and off-shore engineers.</p></li>
-            <li><p>Strong emphasis on taking time for learning and improving technical skills of my team and myself.</p></li>
-            <li><p>Converted developers from other teams to front-end engineers in my team.</p></li>
-        </ul>
+        <h2>Abstract</h2>
+        <p>Front-end developer at Facebook. Before that, front-end team leader, front-end developer and back-end
+            developer. At Facebook, I focus on adapting the team’s web product to varying form factors, particularly
+            mobile. During the past few years at my previous job, developed a product’s web app from the ground up,
+            first as an engineer and later as the team leader.</p>
     </section>
 
     <section id="experience">
-        <h4>Employment</h4>
-        <h5>2018 - present, Front-end developer at Facebook</h5>
-        <p>Just started, stay tuned...</p>
+        <h2>Employment</h2>
+        <h3>2018 - present, Front-end developer at Facebook</h3>
+        <p>Joined the team responsible for the company’s internal dashboarding product. Focused on adapting the product
+            better to varying form factors, such as small laptop displays and large non-interactive TV screens.
+            Highlights:</p>
+        <ul>
+            <li>
+                <p>Pitched the idea to develop a web view for mobile devices, the team’s opinion was that the required
+                    effort for an MVP is too big. Built proof of concept as a hackathon project to demonstrate actual
+                    effort is smaller, gained team approval for the project, implemented, experimented with the group
+                    (team & offshore sister teams) and released.</p>
+            </li>
+            <li>
+                <p>Introduced CSS grid to the group, assisted engineers to start using it in their products.</p>
+            </li>
+        </ul>
+        <p>Among the technologies I’ve used: React including hooks, GraphQL with Relay.</p>
 
-        <h5>2007 – 2018 at Micro Focus (formerly HP Enterprise, HP, Mercury)</h5>
+        <h3>2007 – 2018 at Micro Focus (formerly HP Enterprise, HP, Mercury)</h3>
         <ul class="chronologicalList">
             <li class="chronologicalList__item">
                 <p>2014 – 2018</p>
@@ -77,8 +84,10 @@
                         cross-browser compatibility, integration with other products, design and implementation,
                         interfaces with dev and QA teams in and out of the product, localization of the product.
                         Initiated and drove efforts missing in the team, such as development using ES2015+, unit and E2E
-                        testing. Initiated and drove efforts missing in the group, such as feature flags, branching
-                        model similar to git flow, and hackathons.</p></div>
+                        testing, CSS grid. Initiated and drove efforts missing in the group, such as feature flags,
+                        branching model similar to git flow, and hackathons.</p>
+                    <p>Converted developers from other tech stacks to front-end engineers in my team.</p>
+                </div>
             </li>
             <li class="chronologicalList__item">
                 <p>2014</p>
@@ -108,7 +117,7 @@
     </section>
 
     <section id="education">
-        <h4>Education</h4>
+        <h2>Education</h2>
         <ul class="chronologicalList">
             <li class="chronologicalList__item"><p>2005 - 2008</p>
                 <p>Studied towards an M.Sc. in computer science specializing in bioinformatics (the study of biologic
@@ -121,8 +130,9 @@
         </ul>
     </section>
 
+<!--
     <section id="interests">
-        <h4>Personal interests</h4>
+        <h2>Personal interests</h2>
         <ul class="interests">
             <li>
                 <p>Love VR/AR/MR, especially WebVR. If you're into that, I'll most likely want to work with or for you.
@@ -130,19 +140,18 @@
                     my own.
                 </p>
             </li>
-<!--
             <li>
                 <p>Autonomous cars. Beyond the obvious coolness, what is it like to be a developer for THAT kind of
                     software? And what is the level of professionalism a quality engineer has to have?</p>
             </li>
-            If you're reading this, thanks for taking an interest in my source code. 😉 WDYT? Drop me me a line at my
-            Twitter, it's somewhere around here...
--->
         </ul>
     </section>
+-->
 
     <footer>
-        <p id="updated-cv-link"><a href="https://orenshalev.github.io/CV/">Updated version of this CV</a></p>
+        <p id="updated-cv-link">Updated version of this CV:
+            <a href="https://orenshalev.github.io/CV/">https://orenshalev.github.io/CV/</a>
+        </p>
     </footer>
 
 </div>

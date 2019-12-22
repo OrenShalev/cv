@@ -5,40 +5,54 @@ body {
   text-align: justify;
   box-sizing: border-box;
   line-height: 1.25;
-  color: #222; }
+  color: #222;
+  font-weight: lighter; }
 
 .body-wrapper {
   width: 100%;
   position: absolute;
-  padding: 1.5em;
+  padding: 1em;
   box-sizing: inherit; }
 
 @media (min-width: 64em) {
   .body-wrapper {
     width: calc(100% * 3 / 4); } }
 
-h1, h4 {
-  border-bottom: 1px solid lightgrey; }
+h1, h2 {
+  letter-spacing: .05em; }
 
 h1 {
-  color: #12a112; }
+  color: #12a112;
+  font-weight: 500; }
 
-h4, h5 {
+h2 {
+  border-bottom: 1px solid lightgrey;
+  font-size: 1.25em; }
+
+h2, h3 {
   font-family: 'Roboto', sans-serif;
   color: #1b981b;
   margin-bottom: .5em; }
 
+h3 {
+  font-size: 1em; }
+
+h1, #last-update {
+  margin: 0; }
+
+#last-update {
+  font-size: .8em; }
+
+header {
+  border-bottom: 1px solid lightgrey;
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap; }
+
 ul {
   list-style-type: square; }
-
-#profile-photo {
-  position: absolute;
-  top: 2em;
-  right: 1.5em;
-  width: 4em;
-  height: 4em;
-  border-radius: .5em;
-  filter: grayscale(1) brightness(4); }
 
 #contact-methods {
   list-style-type: none;
@@ -47,16 +61,11 @@ ul {
   text-align: center; }
 
 @media (min-width: 30em) {
-  #profile-photo {
-    top: 1.5em;
-    right: 1.5em;
-    width: 5em;
-    height: 5em; }
   #contact-methods > li {
     display: inline; }
     #contact-methods > li:nth-last-child(n+2)::after {
       /* every child except the last */
-      content: " //";
+      content: " | ";
       color: #ccc; } }
 
 #abstract-and-objective > li > p {
@@ -95,8 +104,11 @@ a {
   color: #1b981b; }
 
 @media print {
-  a[href^="http"]::after {
-    content: " (" attr(href) ") "; }
+  /*
+    a[href^="http"]::after {
+        content: " (" attr(href) ") "
+    }
+    */
   @page {
     size: A4;
     size: 210mm 297mm;
@@ -108,5 +120,5 @@ a {
     display: none; } }
 
 ::selection {
-  background-color: #ffff66;
+  background-color: yellow;
   color: black; }
