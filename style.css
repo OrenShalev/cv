@@ -8,6 +8,11 @@ body {
   color: #222;
   font-weight: lighter; }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: #ddd; } }
+
 .body-wrapper {
   width: 100%;
   position: absolute;
