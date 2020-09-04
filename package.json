@@ -12,6 +12,6 @@
   "author": "Oren Shalev",
   "homepage": "https://orenshalev.github.io/cv",
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   }
 }
