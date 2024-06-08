@@ -1,0 +1,14 @@
+{
+  "name": "Oren Shalev, CV",
+  "short_name": "Oren Shalev",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#008031",
+  "icons": [
+    {
+      "src": "./OrenShalev_thumbnail.jpg",
+      "sizes": "80x80"
+    }
+  ]
+}

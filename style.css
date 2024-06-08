@@ -1,0 +1,342 @@
+:root {
+  /* Light theme palette using hsl() */
+  --accent-color: hsl(143 100% 25%);
+  --background-color: white;
+  --color: hsl(44 10% 13%);
+  --outline-color: hsl(67 16% 80%);
+}
+
+/* Dark theme palette using hsl() */
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: hsl(130 80% 75%);
+    --background-color: hsl(67, 6%, 5%);
+    --color: hsl(67 16% 90%);
+    --outline-color: hsl(67 11% 40%);
+  }
+}
+
+/* Light and dark theme palette using oklch() for supported browsers */
+@supports (color: oklch(0% 0 0)) {
+  :root {
+    --accent-color: oklch(0.52 0.2 148);
+    /* I really like the following color, but poor contrast on white :/ */
+    /* --accent-color: oklch(60% 0.24 148); */
+    --background-color: oklch(100% 0 0);
+    --color: oklch(26% 0.01 91);
+    --outline-color: oklch(86% 0.02 112);
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    :root {
+      --accent-color: oklch(88% 0.15 148);
+      --background-color: oklch(16% 0 0);
+      --color: oklch(93% 0.01 112);
+      --outline-color: oklch(54% 0.03 113);
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --body-text-font: "Noto sans", serif;
+  --title-text-font: "Roboto Slab", sans-serif;
+  background-color: var(--background-color);
+  color: var(--color);
+  color-scheme: light dark;
+  font-family: var(--body-text-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  /* text-align: justify; */
+  line-height: 1.25;
+  /* Zero padding for block-start bc the header contains block-start padding, */
+  /* The header has `position sticky` and hides the scrolling content.  */
+  padding: 0 1rem 1rem 1rem;
+}
+
+body {
+  margin: auto;
+  max-width: 64rem;
+}
+
+/* .body-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 1rem;
+  box-sizing: inherit;
+} */
+
+h1,
+h2,
+h3 {
+  color: var(--accent-color);
+  font-family: var(--title-text-font);
+}
+h1,
+h2 {
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+}
+h1 {
+  font-size: 2rem;
+  /* margin: 0; */
+}
+h2 {
+  font-size: 1.3rem;
+  /* margin: 1rem 0 0.5rem 0; */
+}
+h3 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  /* margin: 1rem 0 0.25rem 0; */
+}
+
+header,
+h2 {
+  border-block-end: 2px solid var(--outline-color);
+}
+
+p {
+  /* margin: 0 0 0.5rem 0; */
+}
+
+header {
+  align-items: baseline;
+  background-color: var(--background-color);
+  display: flex;
+  flex-wrap: wrap;
+  /* Small gap if column, larger if row. */
+  /* Works even when column is a result of flow on `flex-direction: row;` */
+  gap: 0.5rem 2rem;
+  justify-content: space-between;
+  padding-block-start: 1rem;
+}
+#last-update {
+  font-size: 0.8rem;
+}
+
+ul {
+  list-style-type: square;
+  /* margin: 1rem 0; */
+  padding: 0 0 0 1.5rem;
+}
+
+#contact-methods-title {
+  display: none;
+}
+#contact-methods-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2rem;
+  justify-content: center;
+  list-style-type: none;
+  /* margin: 0; */
+  padding: 0;
+}
+
+@media (min-width: 30rem) {
+  #contact-methods-list > li {
+    /* display: inline; */
+
+    &:nth-last-child(n + 2)::after {
+      /* every child except the last */
+      /* content: " | ";
+      color: var(--outline-color); */
+    }
+  }
+}
+
+.chronological-list {
+  list-style: none;
+  padding: 0;
+}
+.chronological-list-item {
+  display: flex;
+  flex-direction: column;
+  /* margin: 0 0 0.5rem 0; */
+}
+.chronological-list-item {
+  /* margin-inline-start: 1rem; */
+}
+.chronological-list-item:last-child {
+  /* margin-block-end: 0; */
+}
+.chronological-list-item-title {
+  color: var(--accent-color);
+}
+/* 
+    & > * {
+
+      &:first-child {
+        min-width: 120px;
+        margin: 0 1rem 0.5rem;
+      }
+    }
+  
+
+
+@media print, (min-width: 48rem) {
+  .chronological-list {
+    > .chronological-list-item {
+      flex-direction: row;
+
+      & > :first-child {
+        text-align: right;
+      }
+    }
+  }
+} */
+
+.interests {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  /* /outlined when focused. */
+  outline-color: currentColor;
+}
+
+@media print {
+  /* TODO: check Safari and FF, or just remove */
+  @page {
+    margin-inline: 1.27cm;
+    /* overflow: visible; */
+    /* size: A4; */
+    /* size: 210mm 297mm; */
+  }
+}
+
+@media screen {
+  footer {
+    display: none;
+  }
+}
+
+::selection {
+  background-color: hsl(60deg 100% 50% / 0.8);
+  color: black;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+* {
+  /* outline: 1px dashed deeppink; */
+  outline-offset: -1px;
+}
+p {
+  margin-block-end: 0.25rem;
+}
+body,
+aside,
+main,
+section,
+.chronological-list {
+  display: flex;
+  flex-direction: column;
+}
+body,
+aside,
+main {
+  gap: 1rem;
+}
+section,
+.chronological-list {
+  gap: 0.5rem;
+}
+
+aside,
+main,
+footer {
+  max-width: 48rem;
+}
+.long-text,
+.chronological-list,
+.list {
+  max-width: 32rem;
+  text-align: justify;
+}
+aside,
+main,
+footer,
+.long-text,
+.chronological-list,
+.list {
+  margin-inline: auto;
+}
+
+@media (min-width: 48rem) {
+  section {
+    max-width: 45rem;
+  }
+  .experience-section {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 1rem;
+    margin-inline: auto;
+  }
+  .experience-section > .experience-section-title {
+    position: sticky;
+    top: 4rem;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 12rem;
+  }
+  .experience-section > :not(.experience-section-title) {
+    /* grid-column: 2; */
+  }
+  .experience-section > .experience-section-title > .spacer {
+    display: none;
+  }
+  #education {
+    align-self: end;
+  }
+}
+
+@media (min-width: 64em) {
+  body {
+    display: grid;
+    gap: 1rem 4rem;
+    grid-template-areas:
+      "header header"
+      "main aside";
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    align-items: start;
+  }
+  header,
+  aside {
+    position: sticky;
+  }
+  header {
+    grid-area: header;
+    top: 0;
+    z-index: 1;
+  }
+  aside {
+    grid-area: aside;
+    /* Ugh, yuck, but must for a nice sticky position... */
+    top: calc(4rem + 10px);
+  }
+  main {
+    grid-area: main;
+  }
+  #contact-methods-title {
+    display: revert;
+  }
+  #contact-methods-list {
+    justify-content: start;
+  }
+}
