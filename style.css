@@ -99,10 +99,6 @@ h2 {
   border-block-end: 2px solid var(--outline-color);
 }
 
-p {
-  /* margin: 0 0 0.5rem 0; */
-}
-
 header {
   align-items: baseline;
   background-color: var(--background-color);
@@ -167,48 +163,19 @@ ul {
 .chronological-list-item-title {
   color: var(--accent-color);
 }
-/* 
-    & > * {
-
-      &:first-child {
-        min-width: 120px;
-        margin: 0 1rem 0.5rem;
-      }
-    }
-  
-
-
-@media print, (min-width: 48rem) {
-  .chronological-list {
-    > .chronological-list-item {
-      flex-direction: row;
-
-      & > :first-child {
-        text-align: right;
-      }
-    }
-  }
-} */
-
-.interests {
-  list-style: none;
-  padding: 0;
-}
 
 a {
   color: var(--accent-color);
   text-decoration: none;
   /* /outlined when focused. */
   outline-color: currentColor;
+  outline-offset: 2px;
 }
 
 @media print {
-  /* TODO: check Safari and FF, or just remove */
   @page {
-    margin-inline: 1.27cm;
-    /* overflow: visible; */
-    /* size: A4; */
-    /* size: 210mm 297mm; */
+    size: A4 portrait;
+    margin: 2.5cm;
   }
 }
 
@@ -218,8 +185,10 @@ a {
   }
 }
 
+/* Nice selection bg color shamelessly copied from thepunctuationguide.com */
+/* No light/dark diff */
 ::selection {
-  background-color: hsl(60deg 100% 50% / 0.8);
+  background-color: #FFD530;
   color: black;
 }
 
@@ -288,12 +257,16 @@ footer,
   }
   .experience-section > .experience-section-title {
     position: sticky;
-    top: 4rem;
+    inset-block-start: 2rem;
     text-align: end;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.8rem;
     width: 12rem;
+    background-color: var(--background-color);
+    padding-block-end: .5rem;
+    border-block-end: 1px solid var(--outline-color);
+    margin-block-end: .5rem;
   }
   .experience-section > :not(.experience-section-title) {
     /* grid-column: 2; */
@@ -322,13 +295,13 @@ footer,
   }
   header {
     grid-area: header;
-    top: 0;
+    inset-block-start: 0;
     z-index: 1;
   }
   aside {
     grid-area: aside;
     /* Ugh, yuck, but must for a nice sticky position... */
-    top: calc(4rem + 10px);
+    inset-block-start: calc(4rem + 10px);
   }
   main {
     grid-area: main;
@@ -338,5 +311,8 @@ footer,
   }
   #contact-methods-list {
     justify-content: start;
+  }
+  .experience-section > .experience-section-title {
+    inset-block-start: 4em;
   }
 }
