@@ -11,7 +11,7 @@
   :root {
     --accent-color: hsl(130 80% 75%);
     --background-color: hsl(67, 6%, 5%);
-    --color: hsl(67 16% 90%);
+    --color: hsl(67 16% 80%);
     --outline-color: hsl(67 11% 40%);
   }
 }
@@ -31,7 +31,7 @@
     :root {
       --accent-color: oklch(88% 0.15 148);
       --background-color: oklch(16% 0 0);
-      --color: oklch(93% 0.01 112);
+      --color: oklch(86% 0.02 112);
       --outline-color: oklch(54% 0.03 113);
     }
   }
@@ -40,34 +40,39 @@
 * {
   box-sizing: border-box;
 }
+
 :root {
-  --body-text-font: "Noto sans", serif;
-  --title-text-font: "Roboto Slab", sans-serif;
+  --body-text-font: "Roboto", sans-serif;
+  --title-text-font: "Roboto Slab", serif;
   background-color: var(--background-color);
   color: var(--color);
   color-scheme: light dark;
   font-family: var(--body-text-font);
   font-size: 16px;
   font-style: normal;
-  font-weight: 300;
-  /* text-align: justify; */
+  font-weight: normal;
   line-height: 1.25;
-  /* Zero padding for block-start bc the header contains block-start padding, */
-  /* The header has `position sticky` and hides the scrolling content.  */
-  padding: 0 1rem 1rem 1rem;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
 }
 
 body {
-  margin: auto;
+  margin: 2rem;
   max-width: 64rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
 }
 
-/* .body-wrapper {
-  width: 100%;
-  position: absolute;
-  padding: 1rem;
-  box-sizing: inherit;
-} */
+header,
+footer {
+  grid-column: 1 / -1;
+}
+
+.list {
+  padding-inline-start: 1.5rem;
+}
 
 h1,
 h2,
@@ -75,23 +80,24 @@ h3 {
   color: var(--accent-color);
   font-family: var(--title-text-font);
 }
+
 h1,
 h2 {
   font-weight: bold;
   letter-spacing: 0.05rem;
 }
+
 h1 {
   font-size: 2rem;
-  /* margin: 0; */
 }
+
 h2 {
   font-size: 1.3rem;
-  /* margin: 1rem 0 0.5rem 0; */
 }
+
 h3 {
   font-size: 1.1rem;
   font-weight: normal;
-  /* margin: 1rem 0 0.25rem 0; */
 }
 
 header,
@@ -104,64 +110,28 @@ header {
   background-color: var(--background-color);
   display: flex;
   flex-wrap: wrap;
-  /* Small gap if column, larger if row. */
-  /* Works even when column is a result of flow on `flex-direction: row;` */
-  gap: 0.5rem 2rem;
   justify-content: space-between;
-  padding-block-start: 1rem;
 }
+
 #last-update {
   font-size: 0.8rem;
 }
 
 ul {
   list-style-type: square;
-  /* margin: 1rem 0; */
-  padding: 0 0 0 1.5rem;
 }
 
-#contact-methods-title {
-  display: none;
-}
 #contact-methods-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0 2rem;
-  justify-content: center;
+  /* justify-content: center; */
   list-style-type: none;
-  /* margin: 0; */
   padding: 0;
 }
 
-@media (min-width: 30rem) {
-  #contact-methods-list > li {
-    /* display: inline; */
-
-    &:nth-last-child(n + 2)::after {
-      /* every child except the last */
-      /* content: " | ";
-      color: var(--outline-color); */
-    }
-  }
-}
-
-.chronological-list {
-  list-style: none;
-  padding: 0;
-}
-.chronological-list-item {
-  display: flex;
-  flex-direction: column;
-  /* margin: 0 0 0.5rem 0; */
-}
-.chronological-list-item {
-  /* margin-inline-start: 1rem; */
-}
-.chronological-list-item:last-child {
-  /* margin-block-end: 0; */
-}
-.chronological-list-item-title {
-  color: var(--accent-color);
+.year-range {
+  font-family: var(--title-text-font);
 }
 
 a {
@@ -170,19 +140,6 @@ a {
   /* /outlined when focused. */
   outline-color: currentColor;
   outline-offset: 2px;
-}
-
-@media print {
-  @page {
-    size: A4 portrait;
-    margin: 2.5cm;
-  }
-}
-
-@media screen {
-  footer {
-    display: none;
-  }
 }
 
 /* Nice selection bg color shamelessly copied from thepunctuationguide.com */
@@ -199,120 +156,59 @@ p,
 ul {
   margin: 0;
 }
-* {
-  /* outline: 1px dashed deeppink; */
-  outline-offset: -1px;
-}
+
 p {
   margin-block-end: 0.25rem;
 }
-body,
+
 aside,
 main,
-section,
-.chronological-list {
+section {
   display: flex;
   flex-direction: column;
 }
-body,
-aside,
+
+aside {
+  gap: 2rem;
+}
+
 main {
   gap: 1rem;
 }
-section,
-.chronological-list {
+
+section {
   gap: 0.5rem;
 }
 
-aside,
-main,
 footer {
-  max-width: 48rem;
-}
-.long-text,
-.chronological-list,
-.list {
-  max-width: 32rem;
-  text-align: justify;
-}
-aside,
-main,
-footer,
-.long-text,
-.chronological-list,
-.list {
-  margin-inline: auto;
+  justify-self: center;
 }
 
-@media (min-width: 48rem) {
-  section {
-    max-width: 45rem;
+@media print {
+  @page {
+    size: A4 portrait;
   }
-  .experience-section {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    gap: 1rem;
-    margin-inline: auto;
+
+  body {
+    font-size: 14px;
   }
-  .experience-section > .experience-section-title {
-    position: sticky;
-    inset-block-start: 2rem;
-    text-align: end;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    width: 12rem;
-    background-color: var(--background-color);
-    padding-block-end: .5rem;
-    border-block-end: 1px solid var(--outline-color);
-    margin-block-end: .5rem;
-  }
-  .experience-section > :not(.experience-section-title) {
-    /* grid-column: 2; */
-  }
-  .experience-section > .experience-section-title > .spacer {
+}
+
+@media screen {
+  footer {
     display: none;
   }
-  #education {
-    align-self: end;
-  }
 }
 
-@media (min-width: 64em) {
+@media screen and (max-width: 48rem) {
   body {
-    display: grid;
-    gap: 1rem 4rem;
-    grid-template-areas:
-      "header header"
-      "main aside";
-    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 1rem;
   }
-  header,
+
   aside {
-    position: sticky;
-  }
-  header {
-    grid-area: header;
-    inset-block-start: 0;
-    z-index: 1;
-  }
-  aside {
-    grid-area: aside;
-    /* Ugh, yuck, but must for a nice sticky position... */
-    inset-block-start: calc(4rem + 10px);
-  }
-  main {
-    grid-area: main;
-  }
-  #contact-methods-title {
-    display: revert;
-  }
-  #contact-methods-list {
-    justify-content: start;
-  }
-  .experience-section > .experience-section-title {
-    inset-block-start: 4em;
+    gap: 0.5rem;
   }
 }
